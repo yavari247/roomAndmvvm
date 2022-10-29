@@ -34,7 +34,7 @@ class SubscriberViewModel(private val repository: SubscriberRepository) : ViewMo
             listener.sendSuccesfull("Please enter subscriber's email")
 
         } else if (!Patterns.EMAIL_ADDRESS.matcher(inputEmail.value!!).matches()) {
-            listener.sendSuccesfull("Please enter a correct email address")
+            listener.sendSuccesfull("please enter a correct email address")
 
         } else {
             /*for update*/
