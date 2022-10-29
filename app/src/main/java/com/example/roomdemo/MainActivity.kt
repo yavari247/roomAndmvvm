@@ -57,11 +57,11 @@ class MainActivity : AppCompatActivity(), SubscriberViewModel.SendSuccesfullText
 
     private fun displaySubscriberList() {
         /* @Query("SELECT * FROM subscriber_data_table")
-efun getAllSubscribers():LiveData<List<Subscriber>>*
-class SubscriberViewModel(private val repository: SubscriberRepository): ViewModel() {
-val subscribers=repository.subscribers
-so subscribers is a livedata and we can observe it
-  */
+        efun getAllSubscribers():LiveData<List<Subscriber>>*
+        class SubscriberViewModel(private val repository: SubscriberRepository): ViewModel() {
+        val subscribers=repository.subscribers
+        so subscribers is a livedata and we can observe it
+        */
         subscriberViewModel.subscribers.observe(this@MainActivity, Observer {
             //fill arraylist of recyclerviewadapter
             adapter.setList(it)
